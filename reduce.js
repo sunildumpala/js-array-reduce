@@ -136,3 +136,23 @@ function partition(arr, callback) {
 
     return [trueSubArray, falseSubArray];
 }
+
+/*************************************
+Adding this part of the code for the Arow functions exercise.
+************************************/
+/**
+ * function double(arr) {
+  return arr.map(function(val) {
+    return val * 2;
+  });
+}
+ */
+/*
+function double(arr) {
+    return arr.map(val => {
+      return val * 2;
+    });
+  }
+*/
+
+let double =arr => arr.map(val => val *2);
