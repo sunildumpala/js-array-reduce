@@ -6,7 +6,16 @@ Examples:
     extractValue(arr,'name') // ['Elie', 'Tim', 'Matt', 'Colt']
 */
 
-function extractValue(arr, key) {}
+function extractValue(arr, key) {
+    let accumulatorArr = [];
+    return arr.reduce(function(accumulator,currentValue){
+        
+         accumulator.push(currentValue[key]);
+         
+         return accumulator;
+
+    }, []);
+}
 
 /*
 Write a function called vowelCount which accepts a string and returns an object with the keys as the vowel and the values as the number of times the vowel appears in the string. This function should be case insensitive so a lowercase letter and uppercase letter should count
