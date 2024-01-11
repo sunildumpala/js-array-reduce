@@ -229,6 +229,8 @@ function squareAndFindEvens(numbers){
     return obj;
 };
 
+
+
 const createInstructor = (firstName, lastName) => {
     return { firstName, lastName};
   };
@@ -242,4 +244,13 @@ const createAnimal = (species, verb, noise) => {
             return this.noise;
         }
     };
+};
+
+/**
+* Destructuring exercises below
+*/
+
+const raceResults = (arr) => {
+    const [first, second, third, ...rest] = arr;
+    return {first, second, third, ...rest};
 };
