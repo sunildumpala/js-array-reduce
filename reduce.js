@@ -176,3 +176,55 @@ function squareAndFindEvens(numbers){
     let evens = squares.filter(square=> square % 2 === 0 );
     return evens;
   }
+
+  /**
+   * Rest Spread exercises below
+   */
+
+  
+  function filterOutOdds(...args){
+    let nums = args.filter(num => num%2 === 0);
+    return nums
+  }
+  
+  function findMin(...args){
+    return args.reduce((accumulator, currentValue) => {
+        if (accumulator > currentValue){
+            accumulator = currentValue;
+        }
+        return accumulator;
+    });
+  }
+
+  const mergeObjects = (obj1, obj2) => ({...obj1, ...obj2});
+  
+
+
+  function doubleAndReturnArgs(arr, ...args){
+    let doubleArray = args.reduce(function(accumulator,currentValue){
+        accumulator.push(currentValue * 2);
+        return accumulator;
+    }, []);
+    return [...arr, ...doubleArray];
+  }
+
+  const extend = (arr1, arr2) => ([...arr1, ...arr2]);
+
+  const addKeyVal = (obj, key, value) => {
+    let newObj = {...obj};   
+    newObj[key] = value;
+    return newObj;
+  };
+
+  const removeKey = (obj, key) => {
+    let newObj = {...obj};
+    delete newObj[key];
+    return newObj;
+  };
+
+  const combine = (obj1, obj2) => ({...obj1, ...obj2});
+
+  const update = (obj, key, val) => {
+    obj[key] = val;
+    return obj;
+};
