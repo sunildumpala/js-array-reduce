@@ -228,3 +228,18 @@ function squareAndFindEvens(numbers){
     obj[key] = val;
     return obj;
 };
+
+const createInstructor = (firstName, lastName) => {
+    return { firstName, lastName};
+  };
+  
+const createAnimal = (species, verb, noise) => {
+    
+    return {
+        species: species,
+        noise: noise,
+        [verb](){
+            return this.noise;
+        }
+    };
+};
