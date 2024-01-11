@@ -254,3 +254,32 @@ const raceResults = (arr) => {
     const [first, second, third, ...rest] = arr;
     return {first, second, third, ...rest};
 };
+
+/**
+* Maps and Sets exercise below
+*/
+
+const hasDuplicate = (arr) => {
+    if ((new Set(arr)).size !== arr.length){
+        return true;
+    }else{
+        return false;
+    } 
+};
+
+function vowelCountv2(str){
+    let resultMap = new Map();
+    for(let element of str.split("")){
+        console.log(element);
+        if (element === "a" || element === "e" || element === "i" || element === "o" || element === "u" ){
+            if (resultMap.get(element) === undefined){
+                resultMap.set(element, 1);
+            }else{                
+                let count = resultMap.get(element);
+                count +=  1;                
+                resultMap.set(element, count);                
+            }
+        }
+    }
+    return resultMap;
+}
