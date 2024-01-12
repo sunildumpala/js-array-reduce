@@ -283,3 +283,22 @@ function vowelCountv2(str){
     }
     return resultMap;
 }
+
+/**
+* Car OO Challenge
+*/
+
+class Vehicle{
+    constructor(make, model, year){
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+    toString(){
+        console.log(this.make);
+        return `The vehicle is a  ${this.make} ${this.model} from ${this.year}`;
+    }
+    honk(){
+        return "Beep";
+    }
+}
