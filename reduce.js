@@ -302,3 +302,11 @@ class Vehicle{
         return "Beep";
     }
 }
+
+class Car extends Vehicle{
+    constructor(make, model, year){
+        super(make, model, year);
+        this.numbWheels = 4;
+    }
+    
+}
