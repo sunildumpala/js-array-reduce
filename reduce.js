@@ -294,8 +294,7 @@ class Vehicle{
         this.model = model;
         this.year = year;
     }
-    toString(){
-        console.log(this.make);
+    toString(){        
         return `The vehicle is a  ${this.make} ${this.model} from ${this.year}`;
     }
     honk(){
@@ -308,5 +307,15 @@ class Car extends Vehicle{
         super(make, model, year);
         this.numbWheels = 4;
     }
-    
+
+}
+
+class Motorcycle extends Vehicle{
+    constructor(make, model, year){
+        super(make, model, year);
+        this.numbWheels = 2;
+    }
+    revEngine(){
+        return "Vroom";
+    }
 }
